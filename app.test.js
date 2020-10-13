@@ -1,5 +1,6 @@
 const calculator =  require("./calculator");
-const capitalize = require('./capitalize')
+const capitalize = require('./capitalize');
+const reverse = require('./reverseString');
 // Tests for the calculator
 
 test("adds the values given", () =>{
