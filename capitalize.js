@@ -15,6 +15,7 @@ const capitalizeIt = () => {
   let uppercase = false;
 
   if (capitalizeString().check == "string") {
+      
     let newValue = capitalizeString().value.slice(0, 1).toUpperCase();
     let rest = capitalizeString().value.slice(1);
     let capitalizedAns = newValue + rest;
