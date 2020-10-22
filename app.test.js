@@ -2,7 +2,7 @@ const calculator = require("./calculator");
 const capitalize = require("./capitalize");
 const reverse = require("./reverseString");
 const arr = require("./arrayAnalysis");
-const cypher = require('./caesercipher')
+const cypher = require("./caesercipher");
 
 // Tests for the calculator
 
@@ -49,26 +49,35 @@ test("The string passed in should be reversed", () => {
   );
 });
 
-
 // array analysis
 
 test("The object should have properties averange, min, max and length", () => {
-  let test = [1,2,3,4,5];
+  let test = [1, 2, 3, 4, 5];
 
-  expect(arr.analyze(test)).toMatchObject(
-   {averange:3, min:1, max:5, length:5 }
-  );
- 
-})
-
+  expect(arr.analyze(test)).toMatchObject({
+    averange: 3,
+    min: 1,
+    max: 5,
+    length: 5,
+  });
+});
 
 // encyption
 
-test("The object should have properties averange, min, max and length", () => {
-  let test = [1,2,3,4,5];
+test("The value should return true if its a string", () => {
+  let data = "this is a test case";
+  expect(cypher.caeserCipher(data).checkString()).toBe(true);
+});
 
-  expect(arr.analyze(test)).toMatchObject(
-   {averange:3, min:1, max:5, length:5 }
+
+test("The string should be encypted", () => {
+  let test = "Hey there this is a test"
+  let key = 1
+
+  expect(cypher.caeserCipher(test, key).encrypt()).toBe(
+    "IFZ UIFSF UIJT JT B UFTU"
   );
- 
-})
+});
+
+
+
