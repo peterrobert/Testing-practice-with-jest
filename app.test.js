@@ -2,6 +2,8 @@ const calculator = require("./calculator");
 const capitalize = require("./capitalize");
 const reverse = require("./reverseString");
 const arr = require("./arrayAnalysis");
+const cypher = require('./caesercipher')
+
 // Tests for the calculator
 
 test("adds the values given", () => {
@@ -58,3 +60,6 @@ test("The object should have properties averange, min, max and length", () => {
   );
  
 })
+
+
+// 

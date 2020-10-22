@@ -1,8 +1,8 @@
-const caeserCipher = (data) => {
+const caeserCipher = (str, key) => {
 
     const checkString = () => {
 
-        let check = typeof data;
+        let check = typeof str;
         if (check == "string") {
             return true;
         } else {
@@ -11,46 +11,28 @@ const caeserCipher = (data) => {
 
     };
 
-    const assignPosition = () => {
-
-        let alphabets ='abcdefghijklmnopqrstuvwxyz';
-        let arr = [];
-
-        for (let i = 0; i < alphabets.length; i++) {
-            arr.push(alphabets[i]);
-        };
-
-        for (let j = 0; j < arr.length; j++) {
-
-            for (let k = 1; k < arr.length; k++) {
-            
-               console.log(arr[j] + k)
-
-            };
-            
-        };
-
-
-
-
-    
-
-
-    };
-
 
     const encrypt = () => {
+
+        return str.toUpperCase().replace(/[A-Z]/g, c => String.fromCharCode((c.charCodeAt(0) - 65 + key) % 26 + 65));
 
     }
 
     const decrypt = () => {
 
+        return encrypt().toUpperCase().replace(/[A-Z]/g, c => String.fromCharCode((c.charCodeAt(0) - 65 + key) % 26 + 65));
     }
 
 
     return {
+        checkString,
         encrypt,
         decrypt
     };
 
 }
+
+console.log(caeserCipher('ATTACKATONCE', 13).encrypt());
+console.log(caeserCipher('ATTACKATONCE', 13).decrypt());
+
+module.exports = {caeserCipher};
