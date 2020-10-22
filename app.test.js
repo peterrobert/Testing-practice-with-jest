@@ -62,4 +62,13 @@ test("The object should have properties averange, min, max and length", () => {
 })
 
 
-// 
+// encyption
+
+test("The object should have properties averange, min, max and length", () => {
+  let test = [1,2,3,4,5];
+
+  expect(arr.analyze(test)).toMatchObject(
+   {averange:3, min:1, max:5, length:5 }
+  );
+ 
+})
