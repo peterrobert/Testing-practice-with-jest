@@ -1,6 +1,8 @@
+
+/* eslint-disable  consistent-return */
 const capitalizeString = (value) => {
-  value = "hey there this is a test";
-  let check = typeof value;
+  value = 'hey there this is a test';
+  const check = typeof value;
 
   return {
     check,
@@ -11,10 +13,10 @@ const capitalizeString = (value) => {
 const capitalizeIt = () => {
   let uppercase = false;
 
-  if (capitalizeString().check == "string") {
-    let newValue = capitalizeString().value.slice(0, 1).toUpperCase();
-    let rest = capitalizeString().value.slice(1);
-    let capitalizedAns = newValue + rest;
+  if (capitalizeString().check === 'string') {
+    const newValue = capitalizeString().value.slice(0, 1).toUpperCase();
+    const rest = capitalizeString().value.slice(1);
+    const capitalizedAns = newValue + rest;
 
     if (capitalizedAns.slice(0, 1).toUpperCase()) {
       uppercase = true;

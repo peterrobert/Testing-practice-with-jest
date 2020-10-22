@@ -1,11 +1,15 @@
-let analyze = (arr) => {
+
+/* eslint-disable  no-plusplus */
+const analyze = (arr) => {
   function avarange() {
-    var total = 0;
-    for (var i = 0; i < arr.length; i++) {
+    let total = 0;
+    for (let i = 0; i < arr.length; i++) {
       total += arr[i];
     }
 
-    return avg = total / arr.length
+    const avg = total / arr.length;
+
+    return avg;
   }
 
   function min() {
