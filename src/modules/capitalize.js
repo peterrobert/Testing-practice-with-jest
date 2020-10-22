@@ -1,7 +1,6 @@
 const capitalizeString = (value) => {
-    value = "hey there this is a test"
+  value = "hey there this is a test";
   let check = typeof value;
-
 
   return {
     check,
@@ -9,13 +8,10 @@ const capitalizeString = (value) => {
   };
 };
 
-
-
 const capitalizeIt = () => {
   let uppercase = false;
 
   if (capitalizeString().check == "string") {
-      
     let newValue = capitalizeString().value.slice(0, 1).toUpperCase();
     let rest = capitalizeString().value.slice(1);
     let capitalizedAns = newValue + rest;
@@ -33,10 +29,7 @@ const capitalizeIt = () => {
   }
 };
 
-
-
-
 module.exports = {
   capitalizeString,
-  capitalizeIt
+  capitalizeIt,
 };

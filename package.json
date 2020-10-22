@@ -2,7 +2,6 @@
   "name": "learning-jest",
   "version": "1.0.0",
   "description": "A project to learn how to test with jest",
-  "main": "app.test.js",
   "scripts": {
     "test": "jest",
     "watch": "jest --watchAll"
